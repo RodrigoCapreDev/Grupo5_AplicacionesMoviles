@@ -2,11 +2,7 @@ package com.grupo5.app1
 
 import android.os.Bundle
 import android.view.View
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class BienvenidaActivity : AppCompatActivity() {
@@ -15,34 +11,36 @@ class BienvenidaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bienvenida)
 
-        // Configuración de bienvenida
+        // Bienvenida con nombre
         val nombre = intent.getStringExtra("NOMBRE") ?: "usuario"
-        val textView = findViewById<TextView>(R.id.tvBienvenida)
-        textView.text = "¡Bienvenido, $nombre!"
+        val tvBienvenida = findViewById<TextView>(R.id.tvBienvenida)
+        tvBienvenida.text = "¡Bienvenido, $nombre!"
 
-        // Obtener la radioGroup para plataforma
+        // Elementos de plataforma
         val radioGroupPlataforma = findViewById<RadioGroup>(R.id.radioGroupPlataforma)
-        val tvPlataformaSeleccionada = findViewById<TextView>(R.id.tvPlataformaSeleccionada)
+        val imgPlataforma = findViewById<ImageView>(R.id.imgPlataforma)
 
-        // Configuración de preferencia "Otra"
+        // Elementos de preferencias
         val checkOtra = findViewById<CheckBox>(R.id.checkOtra)
         val editOtraPreferencia = findViewById<EditText>(R.id.editOtraPreferencia)
 
-        // Mostrar plataforma seleccionada
         radioGroupPlataforma.setOnCheckedChangeListener { _, checkedId ->
-            val selectedRadioButton = findViewById<RadioButton>(checkedId)
-            val platform = selectedRadioButton.text.toString()
-            tvPlataformaSeleccionada.text = "Plataforma seleccionada: $platform"
-            tvPlataformaSeleccionada.visibility = View.VISIBLE
+            when (checkedId) {
+                R.id.radioAndroid -> {
+                    imgPlataforma.setImageResource(R.drawable.logo_android) // Asegurate de tener esta imagen en res/drawable
+                    imgPlataforma.visibility = View.VISIBLE
+                }
+                R.id.radioIOS -> {
+                    imgPlataforma.setImageResource(R.drawable.logo_ios) // También esta imagen
+                    imgPlataforma.visibility = View.VISIBLE
+                }
+            }
         }
 
-        // Mostrar campo de "Otra" preferencia si se selecciona
+
+        // Mostrar campo adicional si se selecciona "Otra"
         checkOtra.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                editOtraPreferencia.visibility = View.VISIBLE
-            } else {
-                editOtraPreferencia.visibility = View.GONE
-            }
+            editOtraPreferencia.visibility = if (isChecked) View.VISIBLE else View.GONE
         }
     }
 }
