@@ -11,6 +11,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var etPassword: EditText
     private lateinit var btnLogin: Button
     private lateinit var tvRegister: TextView
+    private lateinit var btnFb: ImageView
+    private lateinit var btnGoogle: ImageView
+    private lateinit var btnX: ImageView
+    private lateinit var btnGithub: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
         tvRegister = findViewById(R.id.tvRegister)
+        btnFb = findViewById(R.id.icon1)
+        btnGoogle = findViewById(R.id.icon2)
+        btnX = findViewById(R.id.icon3)
+        btnGithub = findViewById(R.id.icon4)
 
         btnLogin.setOnClickListener {
             val usuario = etUsuario.text.toString().trim()
@@ -33,6 +41,20 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
             }
         }
+        btnFb.setOnClickListener {
+            Toast.makeText(this, "No disponible nunca", Toast.LENGTH_SHORT).show()
+        }
+        btnGoogle.setOnClickListener {
+            Toast.makeText(this, "No disponible nunca", Toast.LENGTH_SHORT).show()
+        }
+        btnX.setOnClickListener {
+            Toast.makeText(this, "No disponible nunca", Toast.LENGTH_SHORT).show()
+        }
+        btnGithub.setOnClickListener {
+            Toast.makeText(this, "No disponible nunca", Toast.LENGTH_SHORT).show()
+        }
+
+
 
         tvRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)

@@ -39,7 +39,7 @@
 
         <EditText
             android:id="@+id/etUsuario"
-            android:padding="10dp"
+            android:padding="12dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -54,7 +54,6 @@
 
         <TextView
             android:id="@+id/tvUserLabel2"
-
             android:textColor="#1C1C1E"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -73,12 +72,11 @@
 
         <EditText
             android:id="@+id/etPassword"
-            android:padding="10dp"
+            android:padding="12dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="16dp"
             android:ems="10"
             android:inputType="textPassword"
             app:layout_constraintTop_toBottomOf="@+id/tvUserLabel2"
@@ -91,10 +89,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginBottom="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:paddingHorizontal="20dp"
             android:clickable="true"
             android:focusable="true"
-            android:text="¿Olvidó su contraseña?"
+            android:text="¿Olvidaste tu contraseña?"
             android:textColor="#1C1C1E"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/etPassword"
@@ -106,7 +106,7 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="55dp"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginTop="20dp"
@@ -172,21 +172,23 @@
         android:id="@+id/socialIconsLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:layout_marginHorizontal="32dp"
-        android:orientation="horizontal"
+        android:layout_marginBottom="100dp"
         android:gravity="center"
+        android:orientation="horizontal"
         android:weightSum="4"
-        app:layout_constraintTop_toBottomOf="@id/divisorLine"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/divisorLine">
 
         <ImageView
             android:id="@+id/icon1"
-            android:layout_width="60dp"
+            android:contentDescription="Logo facebook"
+            android:layout_width="0dp"
             android:layout_height="60dp"
-            android:layout_marginHorizontal="30dp"
+            android:layout_weight="1"
+            android:padding="3dp"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="centerInside"
@@ -194,35 +196,40 @@
 
         <ImageView
             android:id="@+id/icon2"
-            android:layout_width="60dp"
+            android:contentDescription="Logo google"
+            android:layout_width="0dp"
             android:layout_height="60dp"
-            android:layout_marginHorizontal="30dp"
-            android:src="@drawable/logo_google"
+            android:layout_weight="1"
+            android:padding="3dp"
             android:clickable="true"
             android:focusable="true"
-            android:scaleType="centerInside" />
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_google" />
 
         <ImageView
             android:id="@+id/icon3"
-            android:layout_width="60dp"
+            android:contentDescription="Logo x"
+            android:layout_width="0dp"
             android:layout_height="60dp"
-            android:layout_marginHorizontal="30dp"
-            android:src="@drawable/logo_x"
+            android:layout_weight="1"
+            android:padding="3dp"
             android:clickable="true"
             android:focusable="true"
-            android:scaleType="centerInside" />
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_x" />
 
         <ImageView
             android:id="@+id/icon4"
-            android:layout_width="60dp"
+            android:contentDescription="Logo github"
+            android:layout_width="0dp"
             android:layout_height="60dp"
-            android:layout_marginHorizontal="30dp"
-            android:src="@drawable/logo_github"
+            android:layout_weight="1"
+            android:padding="3dp"
             android:clickable="true"
-            android:background="@drawable/rounded_background"
             android:focusable="true"
-            android:scaleType="centerInside" />
-</LinearLayout>
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_github" />
+    </LinearLayout>
 
 
 
