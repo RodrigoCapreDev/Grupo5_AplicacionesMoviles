@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnGoogle: ImageView
     private lateinit var btnX: ImageView
     private lateinit var btnGithub: ImageView
+    private lateinit var tvForgotPassword: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +42,16 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
             }
         }
+
+        tvForgotPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+        }
+
+        tvRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
         btnFb.setOnClickListener {
             Toast.makeText(this, "No disponible nunca", Toast.LENGTH_SHORT).show()
         }
@@ -52,13 +63,6 @@ class MainActivity : AppCompatActivity() {
         }
         btnGithub.setOnClickListener {
             Toast.makeText(this, "No disponible nunca", Toast.LENGTH_SHORT).show()
-        }
-
-
-
-        tvRegister.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
         }
     }
 }
