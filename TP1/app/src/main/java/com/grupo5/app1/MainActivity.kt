@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
         tvRegister = findViewById(R.id.tvRegister)
+        tvForgotPassword = findViewById(R.id.tvForgotPassword)
         btnFb = findViewById(R.id.icon1)
         btnGoogle = findViewById(R.id.icon2)
         btnX = findViewById(R.id.icon3)
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         tvForgotPassword.setOnClickListener {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
         }
 
         tvRegister.setOnClickListener {
