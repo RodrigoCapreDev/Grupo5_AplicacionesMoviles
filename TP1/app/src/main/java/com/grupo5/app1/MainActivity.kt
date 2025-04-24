@@ -32,17 +32,36 @@ class MainActivity : AppCompatActivity() {
         btnGithub = findViewById(R.id.icon4)
 
         btnLogin.setOnClickListener {
-            val usuario = etUsuario.text.toString().trim()
+            val usuario  = etUsuario.text.toString().trim()
             val password = etPassword.text.toString().trim()
 
-            if (usuario == "Juan Torres" && password == "1234utn") {
-                val intent = Intent(this, BienvenidaActivity::class.java)
-                intent.putExtra("NOMBRE", usuario)
-                startActivity(intent)
-            } else {
-                Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+            // 1. Validar campos vacíos
+            when {
+                usuario.isEmpty() -> {
+                    etUsuario.error = "Ingrese su usuario"
+                    etUsuario.requestFocus()
+                }
+                password.isEmpty() -> {
+                    etPassword.error = "Ingrese su contraseña"
+                    etPassword.requestFocus()
+                }
+                else -> {
+                    // 2. Validar credenciales
+                    if (usuario == "Juan Torres" && password == "1234utn") {
+                        val intent = Intent(this, BienvenidaActivity::class.java)
+                        intent.putExtra("NOMBRE", usuario)
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(
+                            this,
+                            "Usuario o contraseña incorrectos",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
             }
         }
+
 
         tvForgotPassword.setOnClickListener {
             val intent = Intent(this, ForgotPasswordActivity::class.java)

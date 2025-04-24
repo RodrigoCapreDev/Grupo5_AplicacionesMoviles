@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import android.widget.EditText
 import android.widget.Button
 import android.widget.Toast
+import android.util.Patterns
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -33,24 +34,34 @@ class RegisterActivity : AppCompatActivity() {
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString()
             val repeatPassword = etRepeatPassword.text.toString()
-
             if (nombre.isEmpty()) {
-                Toast.makeText(this, "Nombre no puede estar vacío", Toast.LENGTH_SHORT).show()
+                etNombre.error = "Ingrese su nombre"
+                etNombre.requestFocus()
                 return@setOnClickListener
             }
-
-            if (email.isEmpty()) {
-                Toast.makeText(this, "Email no puede estar vacío", Toast.LENGTH_SHORT).show()
+            if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                etEmail.error = "Ingrese un email válido"
+                etEmail.requestFocus()
                 return@setOnClickListener
             }
-
-            if (password.length < 6) {
-                Toast.makeText(this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_SHORT).show()
+            if (password.isEmpty()) {
+                etPassword.error = "Ingrese una contraseña"
+                etPassword.requestFocus()
                 return@setOnClickListener
             }
-
+            if (password.length <= 6) {
+                etPassword.error = "La contraseña debe tener más de 6 caracteres"
+                etPassword.requestFocus()
+                return@setOnClickListener
+            }
+            if (repeatPassword.isEmpty()) {
+                etRepeatPassword.error = "Repita la contraseña"
+                etRepeatPassword.requestFocus()
+                return@setOnClickListener
+            }
             if (password != repeatPassword) {
-                Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
+                etRepeatPassword.error = "Las contraseñas no coinciden"
+                etRepeatPassword.requestFocus()
                 return@setOnClickListener
             }
 
