@@ -11,6 +11,11 @@ class BienvenidaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bienvenida)
 
+        val ivLogout = findViewById<ImageView>(R.id.ivLogout)
+        ivLogout.setOnClickListener {
+            finish()
+        }
+
         // Bienvenida con nombre
         val nombre = intent.getStringExtra("NOMBRE") ?: "usuario"
         val tvBienvenida = findViewById<TextView>(R.id.tvBienvenida)

@@ -6,10 +6,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.ImageView
 
 class ForgotPasswordActivity : AppCompatActivity() {
     private lateinit var etEmail: EditText
     private lateinit var btnSend: Button
+    private lateinit var ivBack: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +19,11 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
         etEmail = findViewById(R.id.etEmail)
         btnSend = findViewById(R.id.btnSend)
+        ivBack = findViewById(R.id.ivBack)
 
+        ivBack.setOnClickListener {
+            finish()
+        }
         btnSend.setOnClickListener {
             val email = etEmail.text.toString().trim()
             if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {

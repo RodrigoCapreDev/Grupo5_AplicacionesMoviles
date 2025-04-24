@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Button
 import android.widget.Toast
 import android.util.Patterns
@@ -18,6 +19,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var etPassword: EditText
     private lateinit var etRepeatPassword: EditText
     private lateinit var btnRegister: Button
+    private lateinit var ivBack: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +30,11 @@ class RegisterActivity : AppCompatActivity() {
         etPassword = findViewById(R.id.etPassword)
         etRepeatPassword = findViewById(R.id.etRepeatPassword)
         btnRegister = findViewById(R.id.btnRegister)
+        ivBack = findViewById(R.id.ivBack)
 
+        ivBack.setOnClickListener {
+            finish()
+        }
         btnRegister.setOnClickListener {
             val nombre = etNombre.text.toString().trim()
             val email = etEmail.text.toString().trim()
