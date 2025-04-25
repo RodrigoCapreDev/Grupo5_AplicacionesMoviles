@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/tvUserLabel"
-            android:textColor="#1C1C1E"
+            android:textColor="@color/colorPrimary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -46,7 +46,9 @@
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="16dp"
             android:ems="10"
-            android:inputType="text"
+            android:hint="Nombre y Apellido"
+            android:inputType="textPersonName"
+            android:backgroundTint="@color/colorPrimaryVariant"
             app:layout_constraintBottom_toTopOf="@+id/tvUserLabel2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +56,7 @@
 
         <TextView
             android:id="@+id/tvUserLabel2"
-            android:textColor="#1C1C1E"
+            android:textColor="@color/colorPrimary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -78,7 +80,9 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
+            android:hint="●●●●●●●●"
             android:inputType="textPassword"
+            android:backgroundTint="@color/colorPrimaryVariant"
             app:layout_constraintTop_toBottomOf="@+id/tvUserLabel2"
             app:layout_constraintBottom_toBottomOf="@+id/tvForgotPassword"
             app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +99,7 @@
             android:clickable="true"
             android:focusable="true"
             android:text="¿Olvidaste tu contraseña?"
-            android:textColor="#1C1C1E"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/etPassword"
             app:layout_constraintBottom_toTopOf="@+id/btnLogin"
@@ -103,7 +107,7 @@
 
         <Button
             android:id="@+id/btnLogin"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorOnPrimary"
             android:textStyle="bold"
             android:layout_width="0dp"
             android:layout_height="55dp"
@@ -125,7 +129,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="10dp"
             android:text="¿No tienes cuenta? Registrate"
-            android:textColor="#1C1C1E"
+            android:textColor="@color/colorPrimary"
             android:textStyle="bold"
             android:backgroundTint="@android:color/transparent"
             android:background="@drawable/outlined_button"
@@ -152,13 +156,13 @@
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1"
-            android:background="#BDBDBD" />
+            android:background="@color/colorPrimaryVariant" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="o ingresar con"
-            android:textColor="#888888"
+            android:textColor="@color/colorPrimaryVariant"
             android:layout_marginHorizontal="8dp"
             android:textSize="14sp" />
 
@@ -166,8 +170,9 @@
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1"
-            android:background="#BDBDBD" />
+            android:background="@color/colorPrimaryVariant" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/socialIconsLayout"
         android:layout_width="0dp"

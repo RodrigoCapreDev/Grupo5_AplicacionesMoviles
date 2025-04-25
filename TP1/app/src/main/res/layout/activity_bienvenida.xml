@@ -13,10 +13,10 @@
             android:id="@+id/tvBienvenida"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="64dp"
             android:text="¡Bienvenido!"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorPrimary"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,11 +27,11 @@
             android:id="@+id/tvPlataforma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="40dp"
             android:text="Seleccioná tu plataforma:"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvBienvenida" />
 
@@ -39,11 +39,11 @@
             android:id="@+id/radioGroupPlataforma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@id/tvPlataforma"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" >
+            app:layout_constraintTop_toBottomOf="@id/tvPlataforma">
 
             <RadioButton
                 android:id="@+id/radioAndroid"
@@ -65,39 +65,38 @@
             android:layout_marginTop="8dp"
             android:contentDescription="Logo de la plataforma"
             android:visibility="gone"
-            app:layout_constraintTop_toBottomOf="@id/radioGroupPlataforma"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/radioGroupPlataforma" />
 
 
         <TextView
             android:id="@+id/tvPreferencias"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="150dp"
             android:text="Preferencias:"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgPlataforma" />
+            app:layout_constraintTop_toBottomOf="@id/tvPlataforma" />
 
         <CheckBox
             android:id="@+id/checkProgramacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:text="Programación"
-            app:layout_constraintTop_toBottomOf="@id/tvPreferencias"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/tvPreferencias" />
 
         <CheckBox
             android:id="@+id/checkRedes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:text="Redes"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.422"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/checkProgramacion" />
 
@@ -105,9 +104,8 @@
             android:id="@+id/checkSeguridad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:text="Seguridad"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.459"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/checkRedes" />
 
@@ -115,9 +113,8 @@
             android:id="@+id/checkHardware"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:text="Hardware"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/checkSeguridad" />
 
@@ -125,9 +122,8 @@
             android:id="@+id/checkOtra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:text="Otra"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.406"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/checkHardware" />
 
@@ -135,12 +131,14 @@
             android:id="@+id/editOtraPreferencia"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="@color/colorPrimaryVariant"
             android:hint="Especificá tu preferencia"
             android:visibility="gone"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@id/checkOtra"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/checkOtra" />
 
         <ImageView
             android:id="@+id/ivLogout"
