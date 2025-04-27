@@ -4,8 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F2F2F7"
-        android:textColor="#1C1C1E">
+        android:background="#F2F2F7">
 
         <ImageView
             android:id="@+id/logoApp"
@@ -37,22 +36,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logoApp" />
 
-        <EditText
-            android:id="@+id/etUsuario"
-            android:padding="12dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="16dp"
-            android:ems="10"
-            android:hint="Nombre y Apellido"
-            android:inputType="textPersonName"
-            android:backgroundTint="@color/colorPrimaryVariant"
-            app:layout_constraintBottom_toTopOf="@+id/tvUserLabel2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvUserLabel" />
+    <EditText
+        android:id="@+id/etUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorPrimaryVariant"
+        android:ems="10"
+        android:hint="Nombre y Apellido"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvUserLabel2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserLabel" />
 
         <TextView
             android:id="@+id/tvUserLabel2"
@@ -72,21 +71,21 @@
             app:layout_constraintTop_toBottomOf="@+id/etUsuario"
             app:layout_constraintVertical_bias="0.271" />
 
-        <EditText
-            android:id="@+id/etPassword"
-            android:padding="12dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:ems="10"
-            android:hint="●●●●●●●●"
-            android:inputType="textPassword"
-            android:backgroundTint="@color/colorPrimaryVariant"
-            app:layout_constraintTop_toBottomOf="@+id/tvUserLabel2"
-            app:layout_constraintBottom_toBottomOf="@+id/tvForgotPassword"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/colorPrimaryVariant"
+        android:ems="10"
+        android:hint="********"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserLabel2" />
 
         <TextView
             android:id="@+id/tvForgotPassword"
@@ -105,38 +104,38 @@
             app:layout_constraintBottom_toTopOf="@+id/btnLogin"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:textColor="@color/colorOnPrimary"
-            android:textStyle="bold"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:text="Ingresar"
-            app:layout_constraintBottom_toTopOf="@+id/tvRegister"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="10dp"
+        android:text="Iniciar sesión"
+        android:textColor="@color/colorOnPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
 
-        <Button
-            android:id="@+id/tvRegister"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="10dp"
-            android:text="¿No tienes cuenta? Registrate"
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
-            android:backgroundTint="@android:color/transparent"
-            android:background="@drawable/outlined_button"
-            app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-            app:layout_constraintBottom_toTopOf="@+id/divisorLine"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+    <Button
+        android:id="@+id/tvRegister"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/outlined_button"
+        android:backgroundTint="@android:color/transparent"
+        android:text="¿No tenés cuenta? Registrate"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divisorLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <LinearLayout
         android:id="@+id/divisorLine"
@@ -178,7 +177,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginBottom="100dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="4"
@@ -189,49 +187,49 @@
 
         <ImageView
             android:id="@+id/icon1"
-            android:contentDescription="Logo facebook"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:padding="3dp"
             android:clickable="true"
+            android:contentDescription="Logo facebook"
             android:focusable="true"
+            android:padding="3dp"
             android:scaleType="centerInside"
             android:src="@drawable/logo_facebook" />
 
         <ImageView
             android:id="@+id/icon2"
-            android:contentDescription="Logo google"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:padding="3dp"
             android:clickable="true"
+            android:contentDescription="Logo google"
             android:focusable="true"
+            android:padding="3dp"
             android:scaleType="centerInside"
             android:src="@drawable/logo_google" />
 
         <ImageView
             android:id="@+id/icon3"
-            android:contentDescription="Logo x"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:padding="3dp"
             android:clickable="true"
+            android:contentDescription="Logo x"
             android:focusable="true"
+            android:padding="3dp"
             android:scaleType="centerInside"
             android:src="@drawable/logo_x" />
 
         <ImageView
             android:id="@+id/icon4"
-            android:contentDescription="Logo github"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:padding="3dp"
             android:clickable="true"
+            android:contentDescription="Logo github"
             android:focusable="true"
+            android:padding="3dp"
             android:scaleType="centerInside"
             android:src="@drawable/logo_github" />
     </LinearLayout>

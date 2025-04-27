@@ -55,8 +55,8 @@ class RegisterActivity : AppCompatActivity() {
                 etPassword.requestFocus()
                 return@setOnClickListener
             }
-            if (password.length <= 6) {
-                etPassword.error = "La contraseña debe tener más de 6 caracteres"
+            if (password.length < 6) {
+                etPassword.error = "La contraseña debe tener al menos 6 caracteres"
                 etPassword.requestFocus()
                 return@setOnClickListener
             }
