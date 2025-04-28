@@ -25,6 +25,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
             finish()
         }
         btnSend.setOnClickListener {
+            btnSend.animarVista()
             val email = etEmail.text.toString().trim()
             if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 etEmail.error = "Ingrese un email válido"

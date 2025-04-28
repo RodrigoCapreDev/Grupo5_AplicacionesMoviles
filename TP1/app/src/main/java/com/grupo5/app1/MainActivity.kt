@@ -34,8 +34,7 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val usuario  = etUsuario.text.toString().trim()
             val password = etPassword.text.toString().trim()
-
-            // 1. Validar campos vacíos
+            btnLogin.animarVista()
             when {
                 usuario.isEmpty() -> {
                     etUsuario.error = "Ingrese su usuario"
@@ -46,7 +45,6 @@ class MainActivity : AppCompatActivity() {
                     etPassword.requestFocus()
                 }
                 else -> {
-                    // 2. Validar credenciales
                     if (usuario == "Juan Torres" && password == "1234utn") {
                         val intent = Intent(this, BienvenidaActivity::class.java)
                         intent.putExtra("NOMBRE", usuario)
@@ -64,26 +62,33 @@ class MainActivity : AppCompatActivity() {
 
 
         tvForgotPassword.setOnClickListener {
+            tvForgotPassword.animarVista()
             val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
 
         tvRegister.setOnClickListener {
+            tvRegister.animarVista()
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         btnFb.setOnClickListener {
+            btnFb.animarVista()
             Toast.makeText(this, "No disponible nunca", Toast.LENGTH_SHORT).show()
         }
         btnGoogle.setOnClickListener {
+            btnGoogle.animarVista()
             Toast.makeText(this, "No disponible nunca", Toast.LENGTH_SHORT).show()
         }
         btnX.setOnClickListener {
+            btnX.animarVista()
             Toast.makeText(this, "No disponible nunca", Toast.LENGTH_SHORT).show()
         }
         btnGithub.setOnClickListener {
+            btnGithub.animarVista()
             Toast.makeText(this, "No disponible nunca", Toast.LENGTH_SHORT).show()
         }
     }
+
 }

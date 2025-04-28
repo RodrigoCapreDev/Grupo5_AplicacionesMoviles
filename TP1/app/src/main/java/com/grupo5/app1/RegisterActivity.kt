@@ -36,6 +36,7 @@ class RegisterActivity : AppCompatActivity() {
             finish()
         }
         btnRegister.setOnClickListener {
+            btnRegister.animarVista()
             val nombre = etNombre.text.toString().trim()
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString()
