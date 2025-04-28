@@ -9,7 +9,7 @@ class BienvenidaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bienvenida)
+        setContentView(R.layout.activity_welcome)
 
         val ivLogout = findViewById<ImageView>(R.id.ivLogout)
         ivLogout.setOnClickListener {
